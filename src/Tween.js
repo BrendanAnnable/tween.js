@@ -85,13 +85,13 @@ var TWEEN = TWEEN || ( function () {
 
 } )();
 
-TWEEN.Tween = function ( object ) {
+TWEEN.Tween = function ( object, duration ) {
 
 	var _object = object;
 	var _valuesStart = {};
 	var _valuesEnd = {};
 	var _valuesStartRepeat = {};
-	var _duration = 1000;
+	var _duration =  duration !== undefined ? duration : 1000;
 	var _repeat = 0;
 	var _yoyo = false;
 	var _isPlaying = false;
